@@ -1,6 +1,6 @@
 # Name: Audio-Visual Tour of the NYUAD Campus
 
-**Project Link: **
+**Project Link:**
 https://muhammadanas720.github.io/NYUAD-Audio-Visual-Tour/
 
 **Project Description:**
