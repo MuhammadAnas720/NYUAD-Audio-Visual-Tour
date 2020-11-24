@@ -1,0 +1,939 @@
+@font-face
+{
+  font-family: 'Gotham';
+  src: url(Gotham_Book_Regular.otf);
+}
+
+@font-face
+{
+  font-family: 'verdana';
+  src: url(verdana/VERDANAO.ttf);
+}
+
+header { border:1px black solid; }
+
+main {
+  height: 100vh;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-image: url('images/bg01.png');
+  background-color: #58008E;
+  background-position: center;
+  background-repeat: repeat;
+  font-family: 'Gotham';
+  padding: 0;
+  margin-top: auto;
+}
+
+.body {
+  margin: 0;
+  background-color: #58008E;
+  font-family: 'Gotham';
+  overflow: hidden !important;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+/* class styles for the tour map */
+.tour {
+  width: 90%;
+  position: relative;
+  height: 120vh;
+  margin:  120px auto;
+  padding: 25px 0 180px 0;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* section heading div */
+.section-header {
+  width: 50%;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: 'verdana', bold;
+  font-size: 2rem;
+  color: #58008E;
+
+
+}
+
+/* container for content on location page */
+.container {
+  margin: 0;
+  display: inline;
+  width: 100%;
+  position: relative;
+}
+
+/* to hold the map */
+.map {
+  height: 75%;
+  width: 90%;
+  display: block;
+  margin: -60px auto auto auto;
+  position: relative;
+}
+
+/* map comes up with unnecessary details on the webpage. this div is used to hide that */
+.hider {
+  height: 50px;
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  bottom: 50px;
+  background-color: white;
+  margin-bottom: -30px;
+}
+
+/* to hold the 3 locations */
+.section-location {
+  width: 70%;
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+
+/* to hold the 3 locations */
+.locations-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: -50px auto 0 auto;
+  width: 80%;
+  flex: 1;
+  z-index: 20;
+}
+
+/* to hold one location */
+.location {
+  margin: 0 auto;
+  width: 30%;
+  height: 200px;
+  background: url("images/download.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+/* the following provides background images to all the location holders */
+
+#palms
+{
+  background: url("images/palms.jpg");
+  background-size: cover;
+}
+
+#highline
+{
+  background: url("images/highline.jpg");
+  background-size: cover;
+
+}
+
+#welcomecenter
+{
+  background: url("images/welcomecenter.jpg");
+  background-size: cover;
+
+}
+
+#marketplace
+{
+  background: url("images/marketplace.jpg");
+  background-size: cover;
+
+}
+
+#d2
+{
+  background: url("images/d2.jpg");
+  background-size: cover;
+
+}
+
+#fitness
+{
+  background: url("images/fitness.jpg");
+  background-size: cover;
+
+}
+
+#librarycafe
+{
+  background: url("images/librarycafe.jpg");
+  background-size: cover;
+
+}
+
+#library
+{
+  background: url("images/library.jpg");
+  background-size: cover;
+
+}
+
+/* to provide a hover effect */
+.location:hover {
+  display: block;
+  box-shadow: 200px;
+}
+
+.location:hover .location-hover {
+  display: block;
+  box-shadow: 2px 2px 7px 0 #000000;
+}
+
+/* the following style the effect on hover */
+
+.location-hover {
+  background: rgb(135, 105, 158);
+  background: linear-gradient(90deg,rgba(88, 0, 142, 1) 0%,  rgba(124, 22, 187,1) 50%,  rgba(88,0,142,1) 100%);  opacity: 1;
+  display: none;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  margin-bottom: -200px;
+  border-radius: 5px;
+  box-shadow: 20px;
+}
+
+.location-content {
+  padding: 25px;
+  font-size: 0.85rem;
+}
+
+.location-content a{
+  text-decoration: none;
+}
+
+.location-name {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  color: white;
+}
+
+.location-description {
+  width: 100%;
+  color: white;
+  text-align: justify;
+  margin: 25px auto;
+}
+
+
+/* The side navigation menu */
+
+/* basic landing page structure */
+.navbar
+{
+  vertical-align: middle;
+  height: 50px;
+  width: 100% !important;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar_elem
+{
+  width: 94%;
+  display: inline;
+  padding-left: 10px;
+  display: flex;
+  position: relative;
+  z-index: 1000;
+}
+.navbar_elem li
+{
+  display: inline;
+  padding: 10px;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar_elem .left
+{
+  width: 47%;
+  align-items: left;
+  align-content: left;
+  position: relative;
+  z-index: 1000;
+}
+.navbar_elem .right
+{
+  display: inline;
+  width: 47%;
+  text-align: right;
+  /* margin-right: 2.5%; */
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1000;
+}
+
+.left .img{
+  padding-top:10px ;
+  margin-top:20px;
+  position: relative;
+  z-index: 1000;
+}
+.navlinks{
+  color: black;
+  text-decoration: solid underline transparent;
+  transition: text-decoration 1s ease;
+  font-weight: bold;
+}
+
+.navlinks:hover
+{
+  color: #2b0346;
+  transform: scale(1.5);
+  text-decoration: underline;
+}
+
+
+/* side naviagtion menu structure */
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1001; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-image: url('images/02.png');
+  /* background-color: white; */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 150px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+#subMenu01, #subMenu02, #subMenu03 {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1002; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-image: url('images/02.png');
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 150px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+/*
+.menuBtnOff, #home:hover .menuBtnOn{
+  display:none
+}
+.menuBtnOn, #home:hover .menuBtnOff{
+  display:inline-block;} */
+
+.menuBtnOff:hover{
+  cursor: pointer;
+}
+
+
+/* CHANGE IMAGE/IMAGE COLOR ON HOVER IN THE ICONS PLACED IN THE NAVBAR */
+.socialFb_off, #home:hover .socialFb_on{
+  display:none;
+}
+.socialFb_on, #home:hover .socialFb_off{
+  display:inline-block;
+}
+.socialInsta_off, #home:hover .socialInsta_on{
+  display:none;
+}
+.socialInsta_on, #home:hover .socialInsta_off{
+  display:inline-block;
+}
+.socialTwtr_off, #home:hover .socialTwtr_on{
+  display:none;
+
+}
+.socialTwtr_on, #home:hover .socialTwtr_off{
+  display:inline-block;
+}
+
+#social_logo{
+  filter:grayscale(1);
+}
+
+#social_logo:hover{
+  filter:grayscale(0);
+  /* transform: scale(1.5); */
+}
+/* The SIDE navigation menu links */
+.sidenav a {
+  padding: 30px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #57068c;
+  display: block;
+  transition: 0.3s;
+  /* padding-top: 50px; */
+  /* transform: translateY(100%); */
+}
+
+.sidenav2 span {
+  /* padding: 8px 8px 8px 22px; */
+  padding-left: 10%;
+  text-decoration: none;
+  font-size: 25px;
+  color: #57068c;
+  display: block;
+  transition: 0.3s;
+
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {color: black;}
+.sidenav2 a:hover {color: black;}
+.sidenav2 span:hover {color: black;}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav2 .backbtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: black;
+}
+
+#main {transition: margin-left .5s;}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px)
+{
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* --------------------------------------- */
+/* video placement */
+
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+
+}
+.fullscreen-video-wrap{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  /* overflow:hidden; */
+}
+/* --------------------------------------- */
+/* landing page video and video content over lay CSS */
+.v-header{
+  height:100vh;
+  display:flex;
+  color:#fff;
+}
+
+.container{
+  padding-left:1rem;
+  padding-right:1rem;
+  margin:auto;
+  text-align:center;
+  /* overflow: scroll; */
+}
+
+.header-overlay{
+  width: 100%;
+  height:100vh;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  /* z-index:5; */
+  background:rgba(87, 6, 140 ,0.2);
+  text-align: left;
+}
+
+#header-content{
+  z-index:5;
+  width: 100%;
+}
+#header-text{
+  transform: translateY(100%);
+}
+
+#header-content h1{
+  font-size:65px;
+  margin-bottom: 20px;
+  margin-top:10px;
+}
+/* MAX WIDTHS TO MAKE SURE WEBSITE LOOKS FINE AT DIFFERENT BROWSER WIDTHS */
+@media(max-width: 890px)
+{
+  #header-content h1{
+    font-size:40px;
+    margin-bottom: 20px;
+    margin-top:10px;
+  }
+}
+
+@media (max-width: 700px)
+{
+  #header-content h1{
+    font-size:28px;
+    margin-bottom: 20px;
+    margin-top:10px;
+  }
+}
+/* CONTENT IN HEADER STYLES */
+#header-content p{
+  font-size:1.5rem;
+  display:block;
+  align-items: right;
+  /* padding-bottom:2rem; */
+  color: white;
+  text-shadow: 2px 2px 2px #2b0346;
+}
+
+
+.mainBtn, .mainBtn2{
+  /* background: #34b3a0; */
+  border-style: solid ;
+  border-width: thin;
+  color: white;
+  font-size:22px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 100px;;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mainBtn:hover
+{
+  /* border-color: #2b0346;
+  background: #2b0346; */
+  border-color: black;
+  background: black;
+  color: white;
+}
+
+.mainBtn2:hover
+{
+  /* border-color: #2b0346;
+  background: #2b0346; */
+  border-color: black;
+  background: black;
+  color: white;
+}
+
+@media(max-width:100%){
+  .container{
+    padding-right:3rem;
+    padding-left:3rem;
+  }
+}
+.navbar-container {
+  width: 10%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.icon {
+  z-index: 10;
+  position: absolute;
+  width: 100px;
+}
+
+.backbtn {
+  z-index: 10;
+}
+/* ----------------------------------------- */
+/* ANIMATIONS  */
+.ml5 {
+  position: relative;
+  font-weight: 500;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px 2px #2b0346;
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  /* padding-bottom: 0.15em; */
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .ampersand {
+  font-family: 'Gotham';
+  font-style: italic;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+/* ------------ */
+
+.ml10 {
+  position: relative;
+  margin-left: 35%;
+  /* font-weight: 900; */
+  /* font-size: 1em; */
+}
+
+.ml10 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  /* padding-top: 0.2em; */
+  padding-right: 0.05em;
+  margin-top:0px;
+  /* padding-bottom: 0.1em; */
+  overflow: hidden;
+}
+
+.ml10 .letter {
+  display: inline-block;
+  line-height: 1em;
+  transform-origin: 0 0;
+}
+/* #tour
+{
+  text-decoration: underline;
+} */
+/* ----------------------------------------- */
+/* LINKS TO REDIRECT USER TO RELEVANT DIVS/PARTS OF THE WHOLE LANDING PAGE */
+#about, #philosophy, #diningfitness, #studyspots, #outdoors, #panelWelcome
+{
+  display: none;
+}
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #008ba9; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 1000px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#topBtn:hover {
+  background-color: white;
+  color: #2b0346;/* Add a dark-grey background on hover */
+}
+
+
+/* Location page  */
+/* 360 image holder */
+.img-box {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: -60px;
+  z-index: -10;
+  position: absolute;
+}
+
+/* style for audio controls */
+.audio-360 {
+  position: absolute;
+  height: 25px;
+  bottom: 157px;
+  right: 65px;
+  width: 280px;
+}
+
+/* to toggle audio controls */
+.audio-hider
+{
+  z-index: 5;
+  bottom: 150px;
+  width: 45px;
+}
+
+/* button for day view */
+.day
+{
+  top: 150px;
+  width: 45px;
+}
+
+/* button for night view */
+.night
+{
+  top: 205px;
+  width: 45px;
+}
+
+/* button and its effects */
+.btn
+{
+  position: absolute;
+  right: 30px;
+}
+
+.btn:hover
+{
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.8);
+ -webkit-transform: scale(1.2);
+ transform: scale(1.2);
+}
+
+/* Location page  */
+
+/* panel for welcome, inspiration and about us sections */
+.panel{
+  width: 75%;
+  position: relative;
+  margin:  100px auto;
+  padding: 25px 0 80px 0;
+  color: #58008E;
+  background-color: white;
+  border-radius: 10px;
+}
+.welcome{
+  height: auto;
+  /* background-color: grey; */
+}
+
+/* panel heading section */
+.panel .section-header
+{
+  background-color: white;
+  color: #58008E;
+  margin-bottom: -50px;
+}
+
+/* for panel lists */
+.panel li a
+{
+  color: #58008E;
+}
+
+/* content in the section */
+.section-content
+{
+  width: 75%;
+  position: relative;
+  margin: auto;
+  font-family: 'Gotham';
+  color: #3c0160;
+  font-size: 1.05rem;
+}
+
+/* subheading in the section */
+.section-sub
+{
+  font-size: 1.5rem;
+}
+
+/* about us section center aligned */
+.about .section-content
+{
+  text-align: center;
+}
+
+/* holder for 2 contact persons */
+.about-holder {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+/* contact personal info section */
+.us {
+  margin: auto;
+  text-align: center;
+  line-height: 0.5;
+}
+
+.ayesha
+{
+}
+
+.anas
+{
+}
+
+/* pictures of about us */
+.display
+{
+  height: 200px;
+}
+
+.display:hover
+{
+  /* transform: scale(1.1); */
+  /* box-shadow: 1px 1px 5px 0 #000000; */
+
+}
+
+/* holder for icons */
+.icons-holder
+{
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 150px;
+  justify-content: space-between;
+
+  margin: auto;
+}
+
+/* styles of icon images */
+.icons-holder img
+{
+  display: block;
+  margin: 10px auto;
+  height: 25px;
+  position: relative;
+  text-align: center;
+}
+
+/* effect on icons */
+.icons-holder img:hover
+{
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.8);
+ -webkit-transform: scale(1.3);
+ transform: scale(1.3);
+}
+#social:hover{
+  transform: scale(1.5);
+}
+
+/* button styles */
+
+.btn-1 {
+  background: linear-gradient(to top, rgba(120,64,153,1), rgba(189,137,221,1) );
+/*
+  background-image: -webkit-linear-gradient(top, #A6212C, #9d0208);
+  background-image: -moz-linear-gradient(top, #A6212C, #9d0208);
+  background-image: -ms-linear-gradient(top, #A6212C, #9d0208);
+  background-image: -o-linear-gradient(top, #A6212C, #9d0208);
+  background-image: linear-gradient(to bottom, #A6212C, #9d0208); */
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-family: 'Gotham';
+  font-size: 20px;
+  font-weight: 200;
+  box-shadow: 1px 1px 5px 0 #000000;
+  -webkit-box-shadow: 1px 1px 5px 0 #000000;
+  -moz-box-shadow: 1px 1px 5px 0 #000000;
+  /* border: solid #337FED 1px; */
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+
+/* button hover effect */
+.btn-1:hover {
+  /* border: solid #337FED 1px; */
+  background: black;
+  background-image: -webkit-linear-gradient(top, #393E40, #212529);
+  background-image: -moz-linear-gradient(top, #393E40, #212529);
+  background-image: -ms-linear-gradient(top, #393E40, #212529);
+  background-image: -o-linear-gradient(top, #393E40, #212529);
+  background-image: linear-gradient(to bottom, #393E40, #212529);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* button styles */
+.btn-2 {
+  /* background: linear-gradient(to top, rgba(88,0,142,1), rgba(189,137,221,1) ); */
+  background-color: rgba(88,0,142,1);
+  background: rgb(223,223,223);
+background: linear-gradient(90deg, rgba(223,223,223,1) 0%, rgba(245,245,245,1) 50%, rgba(223,223,223,1) 100%);
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 5px;
+  color: black;
+  /* font-family: 'Kumbh Sans', sans-serif; */
+  font-size: 20px;
+  font-weight: 800;
+  /* box-shadow: 1px 1px 5px 0 #000000; */
+  -webkit-box-shadow: 1px 1px 5px 0 #000000;
+  -moz-box-shadow: 1px 1px 5px 0 #000000;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px 15px;
+  display: block;
+  margin: -10px auto 0;
+  width: auto;
+  max-width: 150px;
+
+  /* min-width: 80px; */
+}
+
+/* button hover effect */
+.btn-2:hover {
+  /* border: solid #337FED 1px; */
+  background: black;
+  background-image: -webkit-linear-gradient(top, #393E40, #212529);
+  background-image: -moz-linear-gradient(top, #393E40, #212529);
+  background-image: -ms-linear-gradient(top, #393E40, #212529);
+  background-image: -o-linear-gradient(top, #393E40, #212529);
+  background-image: linear-gradient(to bottom, #393E40, #212529);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+
+}
